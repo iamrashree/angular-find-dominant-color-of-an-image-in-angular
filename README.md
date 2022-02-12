@@ -15,4 +15,14 @@ Run `npm install` and `ng serve`. Navigate to `http://localhost:4200/`. The app 
 - express is a framework for building web applications on node, so because on the back end we are using express so installed express dependencies as well.
 - Here is the url https://find-dominant-color.herokuapp.com/
 
+# Screenshots
+ ## Landing Page
+![alt text](https://github.com/iamrashree/find-dominant-color-of-an-image-in-angular/blob/master/src/assets/landing.png?raw=true)
+
+## Result Page
+![alt text](https://github.com/iamrashree/find-dominant-color-of-an-image-in-angular/blob/master/src/assets/result.png?raw=true)
+
+## Error-handling Page
+![alt text](https://github.com/iamrashree/find-dominant-color-of-an-image-in-angular/blob/master/src/assets/error.png?raw=true)
+
 
