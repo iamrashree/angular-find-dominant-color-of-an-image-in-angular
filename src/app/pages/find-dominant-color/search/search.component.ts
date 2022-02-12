@@ -9,6 +9,7 @@ import { ImagesService } from 'src/app/services/images.service';
 })
 export class SearchComponent implements OnInit {
   @Output() imagesList: EventEmitter<string[]> = new EventEmitter();
+  @Output() errorMessage: EventEmitter<string> = new EventEmitter();
 
   images: any[] = [];
 
@@ -29,7 +30,7 @@ export class SearchComponent implements OnInit {
         }
         this.imagesList.emit(this.images);
       }, (error: HttpErrorResponse) => {
-        console.log(error);
+        this.errorMessage.emit(error.error.error.message);
       }
     );
   }
