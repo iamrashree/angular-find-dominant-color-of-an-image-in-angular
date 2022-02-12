@@ -20,11 +20,9 @@ export class SearchComponent implements OnInit {
   getImages(query: string): void {
     this.imagesService.get(query).subscribe(
       (res: any) => {
-        console.log('items', res.items);
         this.images = res.items.map((i: any) => {
           return i.image.thumbnailLink;
         });
-        console.log('images', this.images);
         this.imagesList.emit(this.images);
       }, (error: HttpErrorResponse) => {
         console.log(error);

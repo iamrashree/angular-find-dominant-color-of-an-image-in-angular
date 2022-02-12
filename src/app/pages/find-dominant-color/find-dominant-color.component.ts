@@ -20,7 +20,6 @@ export class FindDominantColorComponent implements OnInit {
 
   getColorList(imageList: string[]): void {
     this.colorList = [];
-    console.log(imageList);
     imageList.forEach((imageUrl) => {
       this.getDominantColor(imageUrl);
     });
@@ -34,7 +33,6 @@ export class FindDominantColorComponent implements OnInit {
       const findDominantColor = new FindDominantColor();
       const dColor = findDominantColor.getDominantColor(img, 10);
       this.colorList.push({ url: imageUrl, color: dColor });
-      console.log(dColor, this.colorList);
     });
   }
 }

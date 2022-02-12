@@ -16,7 +16,6 @@ export class ImagesService {
 
   get(searchWord: string): Observable<Object> {
     const csUrl = `${this.url}&q=${searchWord}`;
-    console.log('url', csUrl);
     return this.http.get(csUrl);
     //.pipe(map((res: any) => res.items));
   }
