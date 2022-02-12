@@ -9,15 +9,22 @@ import { FindDominantColor } from '../helper/find-dominant-color';
 export class FindDominantColorComponent implements OnInit {
 
   colorList: any[] = [];
+  noImageFound: string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  // Will be called when the search component emits the data.
   getImages(imagesList: string[]): void {
-    this.getColorList(imagesList);
+    if (imagesList.length > 0) {
+      this.getColorList(imagesList);
+    } else {
+      this.noImageFound = 'No Images Found...';
+    }
   }
 
+  // Method responsible to call the method to get the dominant color of the image url.
   getColorList(imageList: string[]): void {
     this.colorList = [];
     imageList.forEach((imageUrl) => {
@@ -25,6 +32,7 @@ export class FindDominantColorComponent implements OnInit {
     });
   }
 
+  // Finding dominant color and pushing the color to string array.
   getDominantColor(imageUrl: string): void {
     const img = document.createElement('img');
     img.setAttribute('src', imageUrl);

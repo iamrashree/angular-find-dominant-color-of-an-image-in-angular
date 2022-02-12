@@ -2,7 +2,6 @@
   // SCSS
   // Masonry layout flex
   .masonry-with-flex {
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -24,4 +23,11 @@
     }
   }
 
-  
+  .div-container{
+    margin: 0;
+    padding: 1.5rem;
+  }
+
+  .grid-border{
+    border-radius: 10px;
+  }

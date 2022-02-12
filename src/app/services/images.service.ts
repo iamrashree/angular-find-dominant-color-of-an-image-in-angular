@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -17,7 +16,7 @@ export class ImagesService {
   get(searchWord: string): Observable<Object> {
     const csUrl = `${this.url}&q=${searchWord}`;
     return this.http.get(csUrl);
-    //.pipe(map((res: any) => res.items));
+    // .pipe(map((res: any) => res.items));
   }
 }
 

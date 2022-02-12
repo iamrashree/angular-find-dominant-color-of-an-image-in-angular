@@ -17,12 +17,16 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Call ImageService, get and emit the images.
   getImages(query: string): void {
+    this.images = [];
     this.imagesService.get(query).subscribe(
       (res: any) => {
-        this.images = res.items.map((i: any) => {
-          return i.image.thumbnailLink;
-        });
+        if (res && res.items) {
+          this.images = res.items.map((i: any) => {
+            return i.image.thumbnailLink;
+          });
+        }
         this.imagesList.emit(this.images);
       }, (error: HttpErrorResponse) => {
         console.log(error);

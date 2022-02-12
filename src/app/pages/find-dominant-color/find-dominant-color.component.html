@@ -1,7 +1,13 @@
-<search (imagesList)="getImages($event)"></search>
-
-<div class="masonry-with-flex">
-    <div *ngFor="let color of colorList" [ngStyle]="{ 'background-color' : color.color }">
-        <a target="_blank" [href]="color.url">{{color.color}}</a>
+<div class="div-container">
+    <search (imagesList)="getImages($event)"></search>
+    <span *ngIf="colorList">*Click on the hex value of the color to view image.</span>
+    <br><br>
+    <div class="masonry-with-flex" *ngIf="!noImageFound">
+        <div class="grid-border" *ngFor="let color of colorList" [ngStyle]="{ 'background-color' : color.color }">
+            <a target="_blank" [href]="color.url">{{color.color}}</a>
+        </div>
     </div>
+    <span class="text-danger" *ngIf="noImageFound">
+        {{noImageFound}}
+    </span>
 </div>
