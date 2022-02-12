@@ -2,26 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
-## Development server
+# To Run Angular Application locally
+Run `npm install` and `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Dependencies used
+- bootstrap, quantize 
+- Tried to install dependency for getting the dominant color but none worked for me, so took the part of functionalties from `color-thief` node package and installed the `quantize` and tried to get the dominant color from image.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Deployment
+- Deployed on Heroku by using express,
+- express is a framework for building web applications on node, so because on the back end we are using express so installed express dependencies as well.
+- Here is the url https://find-dominant-color.herokuapp.com/
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
