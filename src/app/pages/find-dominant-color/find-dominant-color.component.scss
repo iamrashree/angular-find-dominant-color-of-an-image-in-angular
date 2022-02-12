@@ -1,0 +1,27 @@
+
+  // SCSS
+  // Masonry layout flex
+  .masonry-with-flex {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    div {
+      width: auto;
+      color: black;
+      margin: 0 1rem 1rem 0;
+      text-align: center;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+    @for $i from 1 through 36 {
+      div:nth-child(#{$i}) {
+        $h: (random(400) + 100) + px;
+        height: $h;
+        line-height: $h;
+      }
+    }
+  }
+
+  

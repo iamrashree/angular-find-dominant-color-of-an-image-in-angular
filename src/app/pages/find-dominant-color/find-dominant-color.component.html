@@ -1,0 +1,7 @@
+<search (imagesList)="getImages($event)"></search>
+
+<div class="masonry-with-flex">
+    <div *ngFor="let color of colorList" [ngStyle]="{ 'background-color' : color.color }">
+        <a target="_blank" [href]="color.url">{{color.color}}</a>
+    </div>
+</div>
