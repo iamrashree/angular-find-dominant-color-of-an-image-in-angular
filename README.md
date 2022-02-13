@@ -3,8 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 # To Run Angular Application locally
-Run `npm install` and `ng serve`. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+1. Replace Google Custom API accessKey and Google searchEngineId in the environment.ts file.
+2. Run `npm install` to add all node packages.
+3. Run `ng serve`. Navigate to `http://localhost:4200/`. 
 
 # Dependencies used
 - bootstrap, quantize 
